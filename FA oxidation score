@@ -30,19 +30,19 @@ normalize1 <- function(x) {
   return(1 - ((x - min(x)) / (max(x) - min(x))))
 }
 
-data$normalized_ABCD1 <- normalize(data$ABCD1) # inducer
-data$normalized_ABCD3 <- normalize(data$ABCD3) # inducer
-data$normalized_ACAD11 <- normalize(data$ACAD11) # inducer
-data$normalized_ACOT8 <- normalize(data$ACOT8) # inducer
-data$normalized_ACOX2 <- normalize(data$ACOX2)
-data$normalized_AMACR <- normalize(data$AMACR) # inducer
-data$normalized_CRAT <- normalize(data$CRAT) # inducer
-data$normalized_MCEE <- normalize(data$MCEE) # inducer
-data$normalized_PCCB <- normalize(data$PCCB) # inducer
-data$normalized_PEX13 <- normalize(data$PEX13) # inducer
-data$normalized_PPARD <- normalize(data$PPARD) # inducer
-data$normalized_SESN2 <- normalize(data$SESN2) # inducer
-data$normalized_SLC25A17 <- normalize(data$SLC25A17) # inducer
+data$normalized_ABCD1 <- normalize(data$ABCD1) # inducer doi: 10.1093/hmg/ddt645
+data$normalized_ABCD3 <- normalize(data$ABCD3) # inducer https://doi.org/10.1093/hmg/ddu448
+data$normalized_ACAD11 <- normalize(data$ACAD11) # inducer doi: 10.1016/j.ymgme.2010.12.005
+data$normalized_ACOT8 <- normalize(data$ACOT8) # inducer https://doi.org/10.1016/j.bbadis.2012.03.009
+data$normalized_ACOX2 <- normalize(data$ACOX2) # inducer https://doi.org/10.1073/pnas.1613228113
+data$normalized_AMACR <- normalize(data$AMACR) # inducer DOI:10.1186/s40246-021-00344-1
+data$normalized_CRAT <- normalize(data$CRAT) # inducer doi: 10.1016/j.molmet.2016.12.008
+data$normalized_MCEE <- normalize(data$MCEE) # inducer doi: 10.1016/j.bbadis.2019.01.021
+data$normalized_PCCB <- normalize(data$PCCB) # inducer doi: 10.3389/fgene.2022.807822
+data$normalized_PEX13 <- normalize(data$PEX13) # inducer doi: 10.15252/embr.201642443
+data$normalized_PPARD <- normalize(data$PPARD) # inducer DOI: 10.1016/j.bbrc.2009.12.127
+data$normalized_SESN2 <- normalize(data$SESN2) # inducer doi: 10.1016/j.jcmgh.2021.04.015
+data$normalized_SLC25A17 <- normalize(data$SLC25A17) # inducer doi: 10.3389/fcell.2020.00144
 
 ## bu genlerin inducer mi suppressor mu oldugunu bulman lazim
 #hepsi inducer
