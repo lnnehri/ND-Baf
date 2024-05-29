@@ -58,47 +58,47 @@ normalize1 <- function(x) {
 }
 
 
-data$normalized_ATP7A <- normalize(data$ATP7A) # inducer
-data$normalized_BNIP3 <- normalize(data$BNIP3) # inducer
-data$normalized_CYBA <- normalize(data$CYBA) # inducer
-data$normalized_CYP1A1 <- normalize(data$CYP1A1) # inducer
-data$normalized_CYP1B1 <- normalize(data$CYP1B1) # inducer
-data$normalized_DDIT4 <- normalize(data$DDIT4) # inducer
-data$normalized_DUOX2 <- normalize(data$DUOX2) # inducer
-data$normalized_EDN1 <- normalize(data$EDN1) # inducer
-data$normalized_EGFR <- normalize(data$EGFR) # inducer
-data$normalized_EPHX2 <- normalize(data$EPHX2) # inducer
-data$normalized_HMOX1 <- normalize(data$HMOX1) # inducer
-data$normalized_HSP90AA1 <- normalize(data$HSP90AA1) # inducer
-data$normalized_MAOB <- normalize(data$MAOB) # inducer
-data$normalized_NOS2 <- normalize(data$NOS2) # inducer
-data$normalized_NOX1 <- normalize(data$NOX1) # inducer
-data$normalized_NOXA1 <- normalize(data$NOXA1) # inducer
-data$normalized_PREX1 <- normalize(data$PREX1) # inducer
-data$normalized_RFK <- normalize(data$RFK) # inducer
-data$normalized_SH3PXD2A <- normalize(data$SH3PXD2A) # inducer
-data$normalized_SH3PXD2B <- normalize(data$SH3PXD2B) # inducer
-data$normalized_SLC7A2 <- normalize(data$SLC7A2) # inducer
-data$normalized_TXNIP <- normalize(data$TXNIP) # inducer
-data$normalized_WASL <- normalize(data$WASL) # inducer
+data$normalized_ATP7A <- normalize(data$ATP7A) # inducer https://doi.org/10.1038/s42003-020-0755-1
+data$normalized_BNIP3 <- normalize(data$BNIP3) # inducer https://doi.org/10.1016/j.bbamcr.2015.02.022
+data$normalized_CYBA <- normalize(data$CYBA) # inducer DOI: 10.1002/humu.21029
+data$normalized_CYP1A1 <- normalize(data$CYP1A1) # inducer doi: 10.1016/j.cotox.2020.07.001
+data$normalized_CYP1B1 <- normalize(data$CYP1B1) # inducer DOI: 10.1039/c9ra03674a
+data$normalized_DDIT4 <- normalize(data$DDIT4) # inducer doi: 10.3389/fonc.2018.00106
+data$normalized_DUOX2 <- normalize(data$DUOX2) # inducer doi: 10.1016/j.redox.2018.04.020
+data$normalized_EDN1 <- normalize(data$EDN1) # inducer doi: 10.1038/sj.bjp.0706193
+data$normalized_EGFR <- normalize(data$EGFR) # inducer doi: 10.1186/s13046-018-0728-0
+data$normalized_EPHX2 <- normalize(data$EPHX2) # inducer https://doi.org/10.3389/fonc.2022.870721
+data$normalized_HMOX1 <- normalize(data$HMOX1) # inducer DOI: 10.1089/ars.2005.7.80 
+data$normalized_MAOB <- normalize(data$MAOB) # inducer doi: 10.1155/2017/3017947
+data$normalized_NOS2 <- normalize(data$NOS2) # inducer https://doi.org/10.1016/j.niox.2019.04.009
+data$normalized_NOX1 <- normalize(data$NOX1) # inducer doi: 10.1101/gad.339903.120
+data$normalized_NOXA1 <- normalize(data$NOXA1) # inducer https://doi.org/10.1158/0008-5472.CAN-15-1512 
+data$normalized_PREX1 <- normalize(data$PREX1) # inducer https://doi.org/10.4049/jimmunol.1002738
+data$normalized_RFK <- normalize(data$RFK) # inducer https://doi.org/10.1016/j.yjmcc.2022.09.003
+data$normalized_SH3PXD2A <- normalize(data$SH3PXD2A) # inducer https://doi.org/10.1242/jcs.203661
+data$normalized_SH3PXD2B <- normalize(data$SH3PXD2B) # inducer https://doi.org/10.1242/jcs.203661
+data$normalized_AKT1 <- normalize(data$AKT1) # inducer DOI:10.1126/scisignal.2003948
+data$normalized_NOS3 <- normalize(data$NOS3) # inducer doi: 10.1172/JCI21968
 
-data$normalized_AKT1 <- normalize1(data$AKT1) # suppressor
-data$normalized_BCL2 <- normalize1(data$BCL2) # suppressor
-data$normalized_DHFR <- normalize1(data$DHFR) # suppressor
-data$normalized_GCLM <- normalize1(data$GCLM) # suppressor
-data$normalized_GPX1 <- normalize1(data$GPX1) # suppressor
-data$normalized_GPX2 <- normalize1(data$GPX2) # suppressor
-data$normalized_GPX3 <- normalize1(data$GPX3) # suppressor
-data$normalized_NOS3 <- normalize1(data$NOS3) # suppressor
-data$normalized_NOSTRIN <- normalize1(data$NOSTRIN) # suppressor
-data$normalized_PARK7 <- normalize1(data$PARK7) # suppressor
-data$normalized_PRDX1 <- normalize1(data$PRDX1) # suppressor
-data$normalized_PRDX3 <- normalize1(data$PRDX3) # suppressor
-data$normalized_PRDX4 <- normalize1(data$PRDX4) # suppressor
-data$normalized_PRKG2 <- normalize1(data$PRKG2) # suppressor
-data$normalized_RORA <- normalize1(data$RORA) # suppressor
-data$normalized_SOD1 <- normalize1(data$SOD1) # suppressor
-data$normalized_TXN <- normalize1(data$TXN) # suppressor
+data$normalized_WASL <- normalize1(data$WASL) # suppressor doi: 10.1016/j.parkreldis.2021.02.001
+data$normalized_TXNIP <- normalize1(data$TXNIP) # suppressor https://doi.org/10.1038/s12276-023-01019-8
+data$normalized_SLC7A2 <- normalize1(data$SLC7A2) # suppressor  DOI: https://doi.org/10.1124/dmd.121.000705
+data$normalized_HSP90AA1 <- normalize1(data$HSP90AA1) # suppressor DOI:https://doi.org/10.1016/j.joca.2020.02.494
+data$normalized_BCL2 <- normalize1(data$BCL2) # suppressor https://doi.org/10.1210/en.2015-1964
+data$normalized_DHFR <- normalize1(data$DHFR) # suppressor doi: 10.1016/j.redox.2019.101185
+data$normalized_GCLM <- normalize1(data$GCLM) # suppressor https://doi.org/10.1016/B978-0-12-420117-0.00001-3
+data$normalized_GPX1 <- normalize1(data$GPX1) # suppressor doi: 10.3390/cancers14102560
+data$normalized_GPX2 <- normalize1(data$GPX2) # suppressor DOI:10.1080/10715762.2021.1882677
+data$normalized_GPX3 <- normalize1(data$GPX3) # suppressor https://doi.org/10.1016/j.bcp.2020.114365
+data$normalized_NOSTRIN <- normalize1(data$NOSTRIN) # suppressor DOI:https://doi.org/10.1053/j.gastro.2006.12.035
+data$normalized_PARK7 <- normalize1(data$PARK7) # suppressor https://doi.org/10.1016/j.exer.2019.107830
+data$normalized_PRDX1 <- normalize1(data$PRDX1) # suppressor doi: 10.1186/s41021-021-00211-4
+data$normalized_PRDX3 <- normalize1(data$PRDX3) # suppressor DOI:10.3892/etm.2021.9870
+data$normalized_PRDX4 <- normalize1(data$PRDX4) # suppressor doi: 10.1177/1533033819864313
+data$normalized_PRKG2 <- normalize1(data$PRKG2) # suppressor doi: 10.1016/j.ajpath.2016.10.016
+data$normalized_RORA <- normalize1(data$RORA) # suppressor  https://doi.org/10.3390/ijms221910665
+data$normalized_SOD1 <- normalize1(data$SOD1) # suppressor doi: 10.1016/j.jneuroim.2006.10.003
+data$normalized_TXN <- normalize1(data$TXN) # suppressor DOI: 10.1080/10245332.2016.1173341
 
 ###
 
