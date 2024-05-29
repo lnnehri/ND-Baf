@@ -1,0 +1,135 @@
+#ROS score
+# df olusturma
+data <- data.frame(
+  group = c(2, 3, 4),
+  AKT1 = c(NA, NA, -1.12537253),
+  ATP7A = c(0.855987085, NA, 1.71298208),
+  BCL2 = c(NA, NA, -1.4975039),
+  BNIP3 = c(NA, 1.81056293, NA),
+  CYBA = c(NA, NA, -1.9489035),
+  CYP1A1 = c(NA, 1.08441409, NA),
+  CYP1B1 = c(-1.5417554, NA, 2.46853471),
+  DDIT4 = c(2.601605169, 2.961595164, 3.475183789),
+  DHFR = c(-1.42470485, NA, -1.9538248),
+  DUOX2 = c(1.985578193, 1.343795499, NA),
+  EDN1 = c(-1.992393124, NA, -3.7231337),
+  EGFR = c(1.07123324, NA, NA),
+  EPHX2 = c(1.21480231, NA, 0.96828596),
+  GCLM = c(-1.1789052, NA, NA),
+  GPX1 = c(-1.080537207, NA, -1.1144963),
+  GPX2 = c(NA, 1.37895444, NA),
+  GPX3 = c(-1.150785991, NA, -1.2201409),
+  HMOX1 = c(NA, NA, 1.20650602),
+  HSP90AA1 = c(-1.945546836, -1.275173899, -2.087067788),
+  MAOB = c(NA, NA, -2.7808074),
+  NOS2 = c(-2.2962272, NA, -2.4195555),
+  NOS3 = c(NA, 2.96993846, 3.33696695),
+  NOSTRIN = c(-1.364725461, NA, -1.5761996),
+  NOX1 = c(-2.98504751, -1.921708293, -4.35222649),
+  NOXA1 = c(1.810805135, NA, NA),
+  PARK7 = c(-0.924837713, NA, -1.1716096),
+  PRDX1 = c(-1.469746004, NA, -1.8694652),
+  PRDX3 = c(-0.7885859, NA, -1.1297303),
+  PRDX4 = c(-0.977240804, NA, -1.3425915),
+  PREX1 = c(1.322603536, 1.101901035, NA),
+  PRKG2 = c(1.738295712, NA, 1.21980613),
+  RFK = c(NA, NA, -1.4934019),
+  RORA = c(1.174270541, NA, 1.21207093),
+  SH3PXD2A = c(1.78368154, 1.88584993, 2.432630493),
+  SH3PXD2B = c(NA, NA, -1.8178487),
+  SLC7A2 = c(1.4209887, NA, 1.2661619),
+  SOD1 = c(-1.123875745, NA, -1.497028),
+  TXN = c(-1.455434486, NA, -1.8217603),
+  TXNIP = c(-3.100828773, NA, -1.5381986),
+  WASL = c(NA, NA, 1.00528093)
+)
+data[is.na(data)] <- 0
+# bakiyorum
+print(data)
+
+
+# normalization
+normalize <- function(x) {
+  return((x - min(x)) / (max(x) - min(x)))
+}
+
+normalize1 <- function(x) {
+  return(1 - ((x - min(x)) / (max(x) - min(x))))
+}
+
+
+data$normalized_ATP7A <- normalize(data$ATP7A) # inducer
+data$normalized_BNIP3 <- normalize(data$BNIP3) # inducer
+data$normalized_CYBA <- normalize(data$CYBA) # inducer
+data$normalized_CYP1A1 <- normalize(data$CYP1A1) # inducer
+data$normalized_CYP1B1 <- normalize(data$CYP1B1) # inducer
+data$normalized_DDIT4 <- normalize(data$DDIT4) # inducer
+data$normalized_DUOX2 <- normalize(data$DUOX2) # inducer
+data$normalized_EDN1 <- normalize(data$EDN1) # inducer
+data$normalized_EGFR <- normalize(data$EGFR) # inducer
+data$normalized_EPHX2 <- normalize(data$EPHX2) # inducer
+data$normalized_HMOX1 <- normalize(data$HMOX1) # inducer
+data$normalized_HSP90AA1 <- normalize(data$HSP90AA1) # inducer
+data$normalized_MAOB <- normalize(data$MAOB) # inducer
+data$normalized_NOS2 <- normalize(data$NOS2) # inducer
+data$normalized_NOX1 <- normalize(data$NOX1) # inducer
+data$normalized_NOXA1 <- normalize(data$NOXA1) # inducer
+data$normalized_PREX1 <- normalize(data$PREX1) # inducer
+data$normalized_RFK <- normalize(data$RFK) # inducer
+data$normalized_SH3PXD2A <- normalize(data$SH3PXD2A) # inducer
+data$normalized_SH3PXD2B <- normalize(data$SH3PXD2B) # inducer
+data$normalized_SLC7A2 <- normalize(data$SLC7A2) # inducer
+data$normalized_TXNIP <- normalize(data$TXNIP) # inducer
+data$normalized_WASL <- normalize(data$WASL) # inducer
+
+data$normalized_AKT1 <- normalize1(data$AKT1) # suppressor
+data$normalized_BCL2 <- normalize1(data$BCL2) # suppressor
+data$normalized_DHFR <- normalize1(data$DHFR) # suppressor
+data$normalized_GCLM <- normalize1(data$GCLM) # suppressor
+data$normalized_GPX1 <- normalize1(data$GPX1) # suppressor
+data$normalized_GPX2 <- normalize1(data$GPX2) # suppressor
+data$normalized_GPX3 <- normalize1(data$GPX3) # suppressor
+data$normalized_NOS3 <- normalize1(data$NOS3) # suppressor
+data$normalized_NOSTRIN <- normalize1(data$NOSTRIN) # suppressor
+data$normalized_PARK7 <- normalize1(data$PARK7) # suppressor
+data$normalized_PRDX1 <- normalize1(data$PRDX1) # suppressor
+data$normalized_PRDX3 <- normalize1(data$PRDX3) # suppressor
+data$normalized_PRDX4 <- normalize1(data$PRDX4) # suppressor
+data$normalized_PRKG2 <- normalize1(data$PRKG2) # suppressor
+data$normalized_RORA <- normalize1(data$RORA) # suppressor
+data$normalized_SOD1 <- normalize1(data$SOD1) # suppressor
+data$normalized_TXN <- normalize1(data$TXN) # suppressor
+
+###
+
+data$Adjusted_Score <- data$normalized_ATP7A + data$normalized_BNIP3 + data$normalized_CYBA + 
+  data$normalized_CYP1A1 + data$normalized_CYP1B1 + data$normalized_DDIT4 + 
+  data$normalized_DUOX2 + data$normalized_EDN1 + data$normalized_EGFR + 
+  data$normalized_EPHX2 + data$normalized_HMOX1 + data$normalized_HSP90AA1 + 
+  data$normalized_MAOB + data$normalized_NOS2 + data$normalized_NOX1 + 
+  data$normalized_NOXA1 + data$normalized_PREX1 + data$normalized_RFK + 
+  data$normalized_SH3PXD2A + data$normalized_SH3PXD2B + data$normalized_SLC7A2 + 
+  data$normalized_TXNIP + data$normalized_WASL + data$normalized_AKT1 + 
+  data$normalized_BCL2 + data$normalized_DHFR + data$normalized_GCLM + 
+  data$normalized_GPX1 + data$normalized_GPX2 + data$normalized_GPX3 + 
+  data$normalized_NOS3 + data$normalized_NOSTRIN + data$normalized_PARK7 + 
+  data$normalized_PRDX1 + data$normalized_PRDX3 + data$normalized_PRDX4 + 
+  data$normalized_PRKG2 + data$normalized_RORA + data$normalized_SOD1 + 
+  data$normalized_TXN
+# ROS ayrimi
+data$category <- ifelse(data$Adjusted_Score > mean(data$Adjusted_Score), "more ROS", "less ROS")
+print(data)
+
+View(data)
+
+for (i in 1:nrow(data)) {
+  cat("Group:", data$group[i], "\t", 
+      "Category:", data$category[i], "\n")
+}
+
+library('ggplot2')
+ggplot(data, aes(x = group, y = Adjusted_Score, fill = category)) +
+  geom_bar(stat = "identity", position = "stack") +
+  scale_fill_manual(values = c("more ROS" = "red", "less ROS" = "blue")) +
+  labs(x = "Group", y = "Adjusted Score", fill = "Category") +
+  theme_minimal()
