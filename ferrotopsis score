@@ -85,28 +85,7 @@ data$normalized_HSPB1<- normalize1(data$HSPB1)
 data$normalized_GCLM<- normalize1(data$GCLM) 
 data$normalized_ACSL5<- normalize1(data$ACSL5) 
 
-#asagidaki kodu incuder mi suppressor mu diye duzenle, supressor icin normalize1 yap fonksiyonu
-data$normalized_AKR1C1 <- normalize(data$AKR1C1)
-data$normalized_AKR1C2 <- normalize(data$AKR1C2)
-data$normalized_AKR1C3 <- normalize(data$AKR1C3)
-data$normalized_CTH <- normalize(data$CTH)
-data$normalized_GCLC <- normalize(data$GCLC)
-data$normalized_HMOX1 <- normalize(data$HMOX1)
-data$normalized_MAP1LC3B <- normalize(data$MAP1LC3B)
-data$normalized_SAT1 <- normalize(data$SAT1)
-data$normalized_SAT2 <- normalize(data$SAT2)
-data$normalized_SLC3A2 <- normalize(data$SLC3A2)
-data$normalized_SLC7A11 <- normalize(data$SLC7A11)
-data$normalized_TP53 <- normalize(data$TP53)
-data$normalized_GSS <- normalize(data$GSS)
-data$normalized_HSPB1 <- normalize(data$HSPB1)
-data$normalized_LPCAT3 <- normalize(data$LPCAT3)
-data$normalized_NOX1 <- normalize(data$NOX1)
-data$normalized_ALOX15 <- normalize(data$ALOX15)
-data$normalized_ACSL4 <- normalize(data$ACSL4)
-data$normalized_FDFT1 <- normalize(data$FDFT1)
-data$normalized_GCLM <- normalize(data$GCLM)
-data$normalized_ACSL5 <- normalize(data$ACSL5)
+
 
 ###
 #adjusted score creation
